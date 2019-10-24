@@ -1,1 +1,2 @@
-type color = Black | White
+type color = Black | White;
+
