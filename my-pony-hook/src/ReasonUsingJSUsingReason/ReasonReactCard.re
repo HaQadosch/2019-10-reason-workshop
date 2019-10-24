@@ -5,7 +5,16 @@
 // - ReasonUsingJSUsingReason.re is used by Index.re
 [@react.component]
 let make = (~style) => {
+  let handleChange = input => Js.log(input);
+
   <div style> 
+    <form action="">
+      <fieldset>
+        <legend>{"Choose your place" |> React.string}</legend>
+        <label htmlFor="place">{"Place" |> React.string}</label>
+        <input type_="text" name="place" id="placeInputText" onChange={event -> handleChange(ReactEvent.Form.target##value)}/>
+      </fieldset>
+    </form>
     <ul>
       // <li>
       //   {React.string("This is a ReasonReact card")} 
@@ -14,7 +23,7 @@ let make = (~style) => {
         -> Belt.List.map(name => <li>{React.string(name)}</li>)
         -> Belt.List.toArray 
         -> React.array
-        }
+      }
     </ul>
   </div>;
 };

@@ -46,6 +46,11 @@ ReactDOMRe.render(
 );
 
 ReactDOMRe.render(
+  <FetchedPlacePictures />,
+  makeContainer("Fetched Places Pictures"),
+);
+
+ReactDOMRe.render(
   <ReasonUsingJSUsingReason />,
   makeContainer("Reason Using JS Using Reason"),
 );
